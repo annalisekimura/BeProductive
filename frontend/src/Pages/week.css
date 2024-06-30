@@ -1,0 +1,11 @@
+.content2 {
+    flex: 1; /* Take up remaining space */
+    padding: 20px; /* Add padding as needed */
+    height: 100%; /* Fill parent height */
+    width: 100%; /* Fill parent width */
+    display: flex;
+    overflow-y: scroll;
+  
+  }
+
+ 

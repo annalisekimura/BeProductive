@@ -1,0 +1,131 @@
+
+.containerLog {
+    display: flex;
+    justify-content: center; /* horizontally center */
+    align-items: center; /* vertically center */
+    height: 100vh; /* full viewport height */
+    background-color: rgb(167, 181, 231);
+    position: relative; /* Ensure positioning context */
+    z-index: 0; /* Default z-index */
+
+}
+
+#hello {
+    width: 300px; /* width of the form */
+}
+
+.enterUser,
+.enterPas {
+    margin-bottom: 15px; /* spacing between inputs */
+}
+
+/* Additional styling for form elements */
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.Or {
+    margin-top: 10;
+    width: 100%;
+    text-align: center;
+}
+
+.btn2 {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover, .btn2:hover {
+    background-color: #0056b3;
+}
+
+.header {
+    position: fixed; /* Ensures the header stays fixed in the viewport */
+    top: 100px; /* Positions the header at the top */
+    width: auto; /* Makes the header span the full width of the viewport */
+    color: black; /* Example text color */
+    text-align: center; /* Centers the text horizontally */
+    padding: 10px 0; /* Adds padding to the top and bottom of the header */
+    z-index: 1000; /* Ensures the header is on top of other content */
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.rainbow-image {
+    position: absolute;
+    top: 50px; /* Adjust as necessary to position the image */
+    left: 50px; /* Adjust as necessary to position the image */
+    width: 200px; /* Adjust the width */
+    z-index: -1; /* Ensures the image is behind the form */
+    opacity: 0.5; /* Optional: Adjust the opacity for better blending */
+    background-color: rgb(167, 181, 231);
+}
+
+.pencil-image {
+    position: absolute;
+    bottom: 50px; /* Adjust as necessary to position the image */
+    right: 100px; /* Adjust as necessary to position the image */
+    width: 200px; /* Adjust the width */
+    z-index: -1; /* Ensures the image is behind the form */
+    opacity: 0.5; /* Optional: Adjust the opacity for better blending */
+    background-color: rgb(167, 181, 231);
+}
+
+.notebook-image {
+    position: absolute;
+    top: 50px; /* Adjust as necessary to position the image */
+    right: 100px; /* Adjust as necessary to position the image */
+    width: 200px; /* Adjust the width */
+    z-index: -1; /* Ensures the image is behind the form */
+    opacity: 0.5; /* Optional: Adjust the opacity for better blending */
+    background-color: rgb(167, 181, 231);
+}
+
+.postIt-image {
+    position: absolute;
+    bottom: 50px; /* Adjust as necessary to position the image */
+    left: 50px; /* Adjust as necessary to position the image */
+    width: 200px; /* Adjust the width */
+    z-index: -1; /* Ensures the image is behind the form */
+    opacity: 0.5; /* Optional: Adjust the opacity for better blending */
+    background-color: rgb(167, 181, 231);
+}
+
+.heart-image {
+    position: absolute;
+    top: 280px; /* Adjust as necessary to position the image */
+    left: 200px; /* Adjust as necessary to position the image */
+    width: 200px; /* Adjust the width */
+    z-index: -1; /* Ensures the image is behind the form */
+    opacity: 0.5; /* Optional: Adjust the opacity for better blending */
+    background-color: rgb(167, 181, 231);
+}
+
+.clock-image {
+    position: absolute;
+    top: 280px; /* Adjust as necessary to position the image */
+    right: 200px; /* Adjust as necessary to position the image */
+    width: 200px; /* Adjust the width */
+    z-index: -1; /* Ensures the image is behind the form */
+    opacity: 0.5; /* Optional: Adjust the opacity for better blending */
+    background-color: rgb(167, 181, 231);
+}

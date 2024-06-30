@@ -1,0 +1,173 @@
+.container3 {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    overflow-y: hidden;
+    height: 100%;
+    
+}
+
+.typeNote {
+    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap; /* Allow notes to wrap to the next row */
+    gap: 60px; /* Space between notes */
+    margin-bottom: 60px;
+    .container3 {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    
+}
+
+.typeNote {
+    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap; /* Allow notes to wrap to the next row */
+    gap: 60px; /* Space between notes */
+    margin-bottom: 60px;
+
+}
+
+.notes {
+    display: flex;
+    flex-wrap: wrap; /* Allow notes to wrap to the next row */
+    gap: 60px; /* Space between notes */
+    
+}
+
+.note {
+    background-color: #9dd0ca; /* Light orange background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: calc(40% - 20px); /* Adjust width to fit three notes per row */
+    position: relative;
+    min-width: 200px; /* Minimum width to prevent notes from being too narrow */
+    flex-grow: 1; /* Allow notes to grow to fill the container */
+    
+}
+
+.note::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: 15px solid #9dd0ca; /* Match note background */
+    border-left: 15px solid transparent;
+    width: 0;
+    height: 0;
+}
+
+.note textarea {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    resize: none;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    outline: none; /* Remove textarea outline */
+}
+
+.note_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    color: #666;
+    font-size: 14px;
+}
+
+.note_footer .note_actions {
+    display: flex;
+    gap: 8px;
+}
+
+.note_save {
+    background-color: rgb(93, 125, 125);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.note_save:hover {
+    background-color: #45a049;
+}
+
+
+}
+
+.notes {
+    display: flex;
+    flex-wrap: wrap; /* Allow notes to wrap to the next row */
+    gap: 60px; /* Space between notes */
+    
+}
+
+.note {
+    background-color: #9dd0ca; /* Light orange background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: calc(40% - 20px); /* Adjust width to fit three notes per row */
+    position: relative;
+    min-width: 200px; /* Minimum width to prevent notes from being too narrow */
+    flex-grow: 1; /* Allow notes to grow to fill the container */
+    
+}
+
+.note::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: 15px solid #9dd0ca; /* Match note background */
+    border-left: 15px solid transparent;
+    width: 0;
+    height: 0;
+}
+
+.note textarea {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    resize: none;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    outline: none; /* Remove textarea outline */
+}
+
+.note_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    color: #666;
+    font-size: 14px;
+}
+
+.note_footer .note_actions {
+    display: flex;
+    gap: 8px;
+}
+
+.note_save {
+    background-color: rgb(93, 125, 125);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.note_save:hover {
+    background-color: #45a049;
+}
