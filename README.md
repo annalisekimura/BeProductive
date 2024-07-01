@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# BeProductive
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This application combines functionalities of a calendar, note-taking, and news aggregation into a single platform, aiming to provide users with a comprehensive tool for managing their schedules, capturing ideas, and staying informed.
 
 ## Available Scripts
 
@@ -14,57 +14,56 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+## Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Login: Secure access to only your data
+* News: Stay updated with the latest news articles from New York Times.
+* Month Calendar: Schedule events, get notification reminders
+* Week Calendar: Schedule daily events
+* Notes: Write notes
 
-### `npm run build`
+## Technologies Used
+* Frontend: React, Axios, FullCalendar, Node.js, JavaScript, CSS, HTML
+* Backend: Cors, Express, MySQL
+* Database: MySQL
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## APIs
+* New York Times API: Provides access to new articles from the New York Times
+  
+##Installation
+1. Clone the repository: git clone https://github.com/annalisekimura/BeProductive.git
+2. cd backend
+3. npm install
+4. cd frontend
+5. npm install
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Getting Started
+1. Backend:
+# cd backend
+# npm start
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Frontend
+# cd frontend
+# npm start
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Usage
+1. Month Calendar:
+    * Add events by clicking on a date.
+    * Add events by clicking on "add event".
+    * Click event to edit or delete it.
+    * Get notifications when an event is set for that day.
+2. Week Calendar:
+    * Add events by clicking on a date.
+    * Add events by clicking on "add event".
+    * Click event to edit or delete it.
+    * Move the event to different days / times by dragging.
+    * Change time of events by resizing.
+    * Drag event to finish line when you finish a task.
+3. Notes:
+    * Create new notes.
+    * Edit or delete notes.
+4. News:
+    * Read the top most popular news articles from the New York Times.
+   
+## Contact
+For support, feedback, or inquiries, please contact Annalise Kimura at amkimura@purdue.edu
