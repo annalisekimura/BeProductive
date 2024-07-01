@@ -17,20 +17,23 @@ You may also see any lint errors in the console.
 ## Features
 
 * Login: Secure access to only your data
-* News: Stay updated with the latest news articles from New York Times.
+* News: Stay updated with the latest news articles from New York Times
 * Month Calendar: Schedule events, get notification reminders
 * Week Calendar: Schedule daily events
 * Notes: Write notes
 
 ## Technologies Used
+
 * Frontend: React, Axios, FullCalendar, Node.js, JavaScript, CSS, HTML
 * Backend: Cors, Express, MySQL
 * Database: MySQL
 
 ## APIs
+
 * New York Times API: Provides access to new articles from the New York Times
   
-##Installation
+## Installation
+
 1. Clone the repository: git clone https://github.com/annalisekimura/BeProductive.git
 2. cd backend
 3. npm install
@@ -38,15 +41,17 @@ You may also see any lint errors in the console.
 5. npm install
 
 ## Getting Started
+
 1. Backend:
-# cd backend
-# npm start
+* cd backend
+* npm start
 
 2. Frontend
-# cd frontend
-# npm start
+* cd frontend
+* npm start
 
 ## Usage
+
 1. Month Calendar:
     * Add events by clicking on a date.
     * Add events by clicking on "add event".
@@ -66,4 +71,5 @@ You may also see any lint errors in the console.
     * Read the top most popular news articles from the New York Times.
    
 ## Contact
+
 For support, feedback, or inquiries, please contact Annalise Kimura at amkimura@purdue.edu
