@@ -114,10 +114,14 @@ function WeekPage() {
         const calendarApi = calendarRef.current.getApi();
         const currentStart = calendarApi.view.currentStart;
         const currentEnd = calendarApi.view.currentEnd;
+        const currentUser = localStorage.getItem('user');
+
 
         const filteredEvents = events.filter(event => {
             const eventDate = new Date(event.start);
-            return eventDate >= currentStart && eventDate < currentEnd;
+            console.log(eventDate);
+            console.log(event.id);
+            return eventDate >= currentStart && eventDate < currentEnd && event.userId === currentUser;
         });
 
         setImportantEventsThisWeek(filteredEvents);
@@ -130,7 +134,7 @@ function WeekPage() {
         if (imageElement) {
             // Get the position relative to the viewport
             const imagePosition = imageElement.getBoundingClientRect();
-            console.log('Image Position:');
+ 
             setLeftPos(imagePosition.left);
             setRightPos(imagePosition.right);
             setDownPos(imagePosition.bottom);
@@ -138,6 +142,9 @@ function WeekPage() {
         }
 
     }, [])
+
+    const currentUser = localStorage.getItem('user');
+    const filteredEvents1 = events2.filter(event => event.userId === currentUser);
 
     
     return (
@@ -154,7 +161,6 @@ function WeekPage() {
                         initialView="timeGridWeek"
                         dateClick={function(info) {
                             var date = info.dateStr
-                            console.log(info.dateStr);
                             var title = prompt('Enter the event title:');
                             var id = Date.now();
                             const calendarApi = calendarRef.current.getApi()
@@ -162,7 +168,8 @@ function WeekPage() {
                                 id: id,
                                 title: title,
                                 start: date,
-                                allDay: false
+                                allDay: false,
+                                userId: currentUser
                             }
                             calendarApi.addEvent(newEvent);
                             handleEventAdd(newEvent);
@@ -188,7 +195,8 @@ function WeekPage() {
                                                 id: id,
                                                 title: title,
                                                 start: date,
-                                                allDay: false
+                                                allDay: false,
+                                                userId: currentUser
                                         }
                                         calendarApi.addEvent(newEvent);
                                         handleEventAdd(newEvent);
@@ -198,9 +206,10 @@ function WeekPage() {
                                 }
                             }
                         }}
-                        events={events2}
+                        events={filteredEvents1}
                         eventClick={handleEventClick}
                         editable={true}
+                        eventResizableFromStart={true}
                         droppable={true}
                         eventDidMount={(info) => {
                             const eventEl = info.el;
@@ -214,8 +223,17 @@ function WeekPage() {
 
                             if (leftPos <= jsEvent.pageX && jsEvent.pageX <= (rightPos + 20) && (upPos - 20) <= jsEvent.pageY && jsEvent.pageY <= (downPos + 20)) {
                                 handleEventDrop(info.event.id);
-                                console.log("handling..");
                             }
+                        }}
+                        eventResize={(info) => {
+                            const event = info.event;
+                            const updatedEvents = events2.map(evt => evt.id === parseInt(event.id, 10) ? {
+                                ...evt,
+                                start: event.start.toISOString(),
+                                end: event.end.toISOString()
+                            } : evt);
+                            setEvents2(updatedEvents);
+                            localStorage.setItem('calendarEventsWeek', JSON.stringify(updatedEvents));
                         }}
                         eventDrop={handleEventDropOrResize} //save event when dropped
                         height="auto" // Set calendar height to full viewport height

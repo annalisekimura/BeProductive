@@ -5,14 +5,19 @@ import './notes.css';
 import {v4 as uuid} from 'uuid';
 import '../App.css'; 
 import Sidebar from "../Components/sidebar";
+import { filter } from "@chakra-ui/react";
 
 /* Sticky notes page */
 
 function Notes() {
     const [inputText, setInputText] = useState("");
 
+    const getCurrentUserId = localStorage.getItem('user');
+    
+
     const [notes, setNotes] = useState(() => {
         return JSON.parse(localStorage.getItem("Notes")) || []
+
     });
 
     const [editToggle, setEditToggle] = useState(null);
@@ -36,10 +41,12 @@ function Notes() {
             )))
         }
         else {
+            console.log(localStorage.getItem('user'))
             setNotes((prevNotes) => [
                 ...prevNotes, {
                     id: uuid(),
-                    text: inputText
+                    text: inputText,
+                    userId: getCurrentUserId
                 }
             ])
         }
@@ -60,6 +67,9 @@ function Notes() {
         window.localStorage.setItem("Notes", JSON.stringify(notes))
     }, [notes])
 
+
+    const filteredNotes = notes.filter(note => note.userId === getCurrentUserId);
+
     return (
         <div className="container3">
             <Sidebar />
@@ -74,7 +84,7 @@ function Notes() {
                 </div>
                 
                 <div className='notes'>
-                    {notes.map((note) => (
+                    {filteredNotes.map((note) => (
                         <div className="note" key={note.id}>
                             <textarea
                                 value={note.text}

@@ -5,6 +5,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import ViewWeekIcon from '@mui/icons-material/ViewWeek';
 import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
+import LogoutIcon from '@mui/icons-material/Logout';
 
 export const SidebarData = [
     {
@@ -29,5 +30,11 @@ export const SidebarData = [
         title: "Notes",
         icon: <FormatListBulletedIcon />,
         link: "/notes"
+    },
+
+    {
+        title: "Logout",
+        icon: <LogoutIcon />,
+        link: "/logout"
     }
 ]

@@ -104,6 +104,9 @@ function MonthPage() {
         };
     };
 
+    const currentUser = localStorage.getItem('user');
+    const filteredEvents = events.filter(event => event.userId === currentUser);
+
     
     return (
       <div className='Container'>
@@ -126,7 +129,8 @@ function MonthPage() {
                     id: id,
                     title: title,
                     start: date,
-                    allDay: true
+                    allDay: true,
+                    userId: currentUser
                 }
                 calendarApi.addEvent(newEvent);
                 handleEventAdd(newEvent);
@@ -149,7 +153,8 @@ function MonthPage() {
                         id: id,
                         title: title,
                         start: date,
-                        allDay: true
+                        allDay: true,
+                        userId: currentUser
                       }
                       calendarApi.addEvent(newEvent);
                       handleEventAdd(newEvent);
@@ -160,7 +165,7 @@ function MonthPage() {
                   }
                 }
               }}
-              events={events}
+              events={filteredEvents}
               eventClick={handleEventClick}
               eventContent={eventContent}
               height="auto" // Set calendar height to full viewport height

@@ -11,6 +11,7 @@ import { useState } from 'react';
 import Login from './Login';
 import { useEffect } from 'react';
 import { Navigate } from 'react-router-dom';
+import Logout from './Pages/Logout';
 
 import { ChakraProvider, theme, Alert, AlertIcon, AlertTitle, AlertDescription, Button, Container, Box} from '@chakra-ui/react';
 
@@ -84,6 +85,7 @@ function App() {
                 <Route path="/month" element={<MonthPage />} />
                 <Route path="/week" element={<WeekPage />} />
                 <Route path="/notes" element={<Notes />} />
+                <Route path="/logout" element={<Logout />} />
               </Routes>
 =
 
@@ -111,6 +113,7 @@ function App() {
                 <Route path="/month" element={<MonthPage />} />
                 <Route path="/week" element={<WeekPage />} />
                 <Route path="/notes" element={<Notes />} />
+                <Route path="/logout" element={<Logout />} />
                 
               </Routes>
 
@@ -140,6 +143,7 @@ function App() {
               <Route path="/month" element={<MonthPage />} />
               <Route path="/week" element={<WeekPage />} />
               <Route path="/notes" element={<Notes />} />
+              <Route path="/logout" element={<Logout />} />
             </Routes>
 
             </div>
