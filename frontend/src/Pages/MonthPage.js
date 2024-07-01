@@ -29,11 +29,19 @@ function MonthPage() {
     /* Notify if events are happening today */
 
     useEffect(() => {
+      
       const today = new Date();
-      today.setHours(0, 0, 0, 0);
+      today.setHours(0, 0, 0, 0)
 
       events.forEach(event => {
+        
         const newDate = new Date(event.start);
+        newDate.setHours(0, 0, 0, 0)
+
+        console.log(newDate);
+        console.log(event.title)
+        console.log(today);
+
         if (today.getTime() === newDate.getTime()) {
           notifyUser(`${event.title}!`);
         }
@@ -121,7 +129,7 @@ function MonthPage() {
               //click on date
               dateClick={function(info) {
                 var date = info.dateStr
-                console.log(info.dateStr);
+
                 var title = prompt('Enter the event title:');
                 var id = Date.now();
                 const calendarApi = calendarRef.current.getApi()
@@ -169,7 +177,6 @@ function MonthPage() {
               eventClick={handleEventClick}
               eventContent={eventContent}
               height="auto" // Set calendar height to full viewport height
-              width="100%" // Set calendar width to 100% of parent container
             />
         </div>
       </div>

@@ -51,7 +51,7 @@ function App() {
 
   
 
-  return (!(userResponded) && !(Notification.permission === "granted") && ( (loggedIn === 'false') || (loggedIn == null)) ) ? (
+  return (!(userResponded) && !(Notification.permission === "granted") && ( loggedIn === 'false') ) ? (
 
     <EventProvider>
     <ChakraProvider theme={theme}>
@@ -87,7 +87,7 @@ function App() {
                 <Route path="/notes" element={<Notes />} />
                 <Route path="/logout" element={<Logout />} />
               </Routes>
-=
+
 
             </div>
 
@@ -97,7 +97,7 @@ function App() {
       
     </WeekProvider>
     </EventProvider>
-  ) : ( (loggedIn === 'false') || (loggedIn == null)) ? (
+  ) : (loggedIn === 'false') ? (
     <EventProvider>
       <WeekProvider>
 
