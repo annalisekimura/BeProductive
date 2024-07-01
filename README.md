@@ -42,7 +42,10 @@ You may also see any lint errors in the console.
 
 ## Getting Started
 
-1. Backend:
+1. Data:
+* Start Apache Web Server and MySQL Database from XAMPP console
+   
+3. Backend:
 * cd backend
 * npm start
 
