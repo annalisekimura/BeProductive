@@ -51,7 +51,7 @@ function App() {
 
   
 
-  return (!(userResponded) && !(Notification.permission === "granted") && ( loggedIn === 'false') ) ? (
+  return (!(userResponded) && !(Notification.permission === "granted") && ( loggedIn === 'false' || loggedIn === null) ) ? (
 
     <EventProvider>
     <ChakraProvider theme={theme}>
@@ -97,7 +97,7 @@ function App() {
       
     </WeekProvider>
     </EventProvider>
-  ) : (loggedIn === 'false') ? (
+  ) : (loggedIn === 'false' || loggedIn === null) ? (
     <EventProvider>
       <WeekProvider>
 
